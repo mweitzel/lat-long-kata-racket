@@ -35,6 +35,19 @@
 ; essentially flipping all 
 ; even though article labels suggest '(ax1 ax2 ay1 ay2) '(bx1 bx2 by1 by2), which we don't use
 
+(define (lines_intersect? a b)
+  ((lambda (num_a num_b denom)
+    (and
+      (not (equal? 0 denom)) ; parallel, also short circuit to prevent n/0 error
+      (between_0_1 (/ num_a denom))  ; ua
+      (between_0_1 (/ num_b denom))) ; ub
+    )
+    (ua_numerator a b)
+    (ub_numerator a b)
+    (_denomenator a b)))
+
+(define (between_0_1 n) (and ( <= 0 n ) ( <= n 1 )))
+
 (define (ua_numerator a b) ; (b3 - b1)(a2 - b2) - (b4 - b2)(a1 - b1)
   (-
     (*
@@ -64,6 +77,8 @@
 
 
 (provide within_bounds?)
+(provide lines_intersect?)
 (provide ua_numerator)
 (provide ub_numerator)
 (provide _denomenator)
+(provide between_0_1)
