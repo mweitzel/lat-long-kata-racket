@@ -32,3 +32,4 @@
 
 (assert "a and b intersect" (lines_intersect? list_a list_b))
 (refute "a and c don't intersect" (lines_intersect? list_a list_c))
+(refute "c and d don't intersect" (lines_intersect? list_c list_d))
