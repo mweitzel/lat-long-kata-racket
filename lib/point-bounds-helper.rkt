@@ -4,6 +4,20 @@
   (write point) (newline)
   )
 
+(define (lines_from_boudaries boundaries)
+  ((lambda (wrapped_boundaries)
+    (build-list
+      (length boundaries)
+      (lambda (n)
+        (append
+          (car (list-tail wrapped_boundaries n))
+          (car (list-tail wrapped_boundaries (+ 1 n)))))))
+  (wrap_boundaries boundaries)))
+;  (append boundaries (list (car boundaries))))) ; wrapped_boundaries
+
+(define (wrap_boundaries boundaries) ; tack first element on end
+  (append boundaries (list (car boundaries))))
+
 
 ; see http://www-cs.ccny.cuny.edu/~wolberg/capstone/intersection/Intersection%20point%20of%20two%20lines.html
 ; the article describes:
@@ -82,3 +96,4 @@
 (provide ub_numerator)
 (provide _denomenator)
 (provide between_0_1)
+(provide lines_from_boudaries)
