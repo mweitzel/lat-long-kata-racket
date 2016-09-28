@@ -5,4 +5,10 @@ which racket || {
   exit 127
 }
 
-racket "test"
+racket "test/test-point-bounds-helper.rkt"
+
+exitCode=$?
+
+test $exitCode = 0 && echo success || echo fail
+
+exit $exitCode
