@@ -4,7 +4,7 @@
   (or b (raise (error message b))))
 
 (define (refute message b)
-  (assert (not b) message))
+  (and b (raise (error message b))))
 
 (provide assert)
 (provide refute)
