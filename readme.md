@@ -1,5 +1,29 @@
 # atomic object coding challenge - neighborhoods
 
+# installing racket
+
+First, follow instructions at http://racket-lang.org/
+
+This project assumes `racket` is in your `$PATH`. If `~/usr/bin` is in your path, you can add racket by running:
+
+```sh
+ln -s /Applications/Racket\ v6.6/bin/racket ~/bin/racket
+```
+
+# running code
+
+Run the library with
+
+```sh
+./bin/main
+```
+
+Run the tests with
+
+```sh
+./bin/test
+```
+
 # description
 
 You are working on a project for the City of Grand Rapids. They have provided you with latitude and longitude coordinate information defining the shapes of the city's neighborhoods. They want an application that, given the latitude and longitude of an address, tells them what neighborhood the address is part of.
