@@ -13,6 +13,16 @@
 ;     '(-1 -1)
 ;     '('(0 0) '(0 2) '(2 2) '(2 0))))
 
+(assert "boundary list produces list of lines"
+  (equal?
+    (lines_from_boudaries
+      (list '(1 1) '(2 2) '(3 4) '(5 5)))
+    (list
+        (list 1 1 2 2)
+        (list 2 2 3 4)
+        (list 3 4 5 5)
+        (list 5 5 1 1))))
+
 (define list_a '(0 0 1 1))
 (define list_b '(0 1 1 0))
 (define list_c '(2 2 3 3))
@@ -33,13 +43,3 @@
 (assert "a and b intersect" (lines_intersect? list_a list_b))
 (refute "a and c don't intersect" (lines_intersect? list_a list_c))
 (refute "c and d don't intersect" (lines_intersect? list_c list_d))
-
-(assert "boundary list produces list of lines"
-  (equal?
-    (lines_from_boudaries
-      (list '(1 1) '(2 2) '(3 4) '(5 5)))
-    (list
-        (list 1 1 2 2)
-        (list 2 2 3 4)
-        (list 3 4 5 5)
-        (list 5 5 1 1))))
