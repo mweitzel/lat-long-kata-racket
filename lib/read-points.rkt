@@ -10,7 +10,8 @@
     (file->lines file)))
 
 (define (parse_point dirty_point)
-  (parse_lat_long (string-trim (second (string-split dirty_point ":")))))
-
+  (list
+    (first (string-split dirty_point ":"))
+    (parse_lat_long (string-trim (second (string-split dirty_point ":"))))))
 (provide read_points)
 (provide parse_point)
