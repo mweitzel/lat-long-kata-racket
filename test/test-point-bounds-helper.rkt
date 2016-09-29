@@ -13,16 +13,12 @@
 ;     '(-1 -1)
 ;     '('(0 0) '(0 2) '(2 2) '(2 0))))
 
-(assert "boundary list produces list of lines"
-  (equal?
-    (lines_from_boudaries
-      (list '(1 1) '(2 2) '(3 4) '(5 5)))
-    (list
-        (list 1 1 2 2)
-        (list 2 2 3 4)
-        (list 3 4 5 5)
-        (list 5 5 1 1))))
-
+(assert "point is within bounds"
+  (within_bounds?                                           ;   1---------4
+    (list 0.5 -0.2)                                         ;   |         |
+    (list '(-1 -1) '(-1 1) '(1 1) '(1 -1))))                ;   |    O----+-O
+;            1        2       3      4                      ;   |         |
+                                                            ;   2---------3
 (assert "line leaving box gives 1 intersection"
   (equal? 1                                                 ;   1---------4
   (intersects_n_times                                       ;   |         |
@@ -54,11 +50,20 @@
         (list '(0 0) '(0 3) '(3 3) '(3 1)                   ;   |   |  |   |
               '(4 1) '(4 3) '(5 3) '(5 0))))))              ;   2---3  6---7
 
+(assert "boundary list produces list of lines"
+  (equal?
+    (lines_from_boudaries
+      (list '(1 1) '(2 2) '(3 4) '(5 5)))
+    (list
+        (list 1 1 2 2)
+        (list 2 2 3 4)
+        (list 3 4 5 5)
+        (list 5 5 1 1))))
+
 (define list_a '(0 0 1 1))
 (define list_b '(0 1 1 0))
 (define list_c '(2 2 3 3))
 (define list_d '(4 4 5 5))
-
 
 (assert "ua_numerator a b" (equal? -1 (ua_numerator list_a list_b)))
 (assert "ub_numerator a b" (equal? -1 (ub_numerator list_a list_b)))

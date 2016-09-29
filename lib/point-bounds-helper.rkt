@@ -1,8 +1,15 @@
 #lang racket
 
+; odd intersections mean its within the bounds
+; see https://en.wikipedia.org/wiki/Point_in_polygon#Ray_casting_algorithm
+
 (define (within_bounds? point boundaries)
-  (write point) (newline)
-  )
+  (equal? 1
+    (modulo
+      (intersects_n_times (append point faraway) (lines_from_boudaries boundaries))
+      2 )))
+
+(define faraway (list 100000000000000 100000000000000))
 
 (define (intersects_n_times line lines_to_check)
   (length
