@@ -28,15 +28,21 @@
 (define list_c '(2 2 3 3))
 (define list_d '(4 4 5 5))
 
-(assert "ua_numerator" (equal? -1 (ua_numerator list_a list_b)))
-(assert "ub_numerator" (equal? -1 (ub_numerator list_a list_b)))
-(assert "_denomenator" (equal? -2 (_denomenator list_a list_b)))
+
+(assert "ua_numerator a b" (equal? -1 (ua_numerator list_a list_b)))
+(assert "ub_numerator a b" (equal? -1 (ub_numerator list_a list_b)))
+(assert "_denomenator a b" (equal? -2 (_denomenator list_a list_b)))
+
 (assert "ua_numerator is 0 for coincident lists" (equal? 0 (ua_numerator list_a list_a)))
 (assert "ub_numerator is 0 for coincident lists" (equal? 0 (ub_numerator list_a list_a)))
 (assert "_denomenator is 0 if lists are parallel" (equal? 0 (_denomenator list_a list_a)))
 
-(assert "between_0_1 0" (between_0_1 0))
-(assert "between_0_1 1" (between_0_1 1))
+(assert "ua_numerator c d" (equal? 0 (ua_numerator list_c list_d)))
+(assert "ub_numerator c d" (equal? -4 (ub_numerator list_c list_d)))
+(assert "_denomenator c d" (equal? 0 (_denomenator list_c list_d)))
+
+(refute "between_0_1 0" (between_0_1 0))
+(refute "between_0_1 1" (between_0_1 1))
 (refute "between_0_1 -1" (between_0_1 -1))
 (refute "between_0_1 2" (between_0_1 2))
 

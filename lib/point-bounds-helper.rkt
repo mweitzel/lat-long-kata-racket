@@ -32,9 +32,11 @@
 ; with line segments described as '(x y x y)
 ; and using the following mapping to our data structures
 ;    our data     article convention
+;                 a1 a2 a3 a4
 ; a '(x y x y)    x1 y1 x2 y2
 ; b '(x y x y)    x3 y3 x4 y4
-;
+;                 b1 b2 b3 b4
+
 ; we will use:
 ;       (b3 - b1)(a2 - b2) - (b4 - b2)(a1 - b1)
 ; ua =  ---------------------------------------
@@ -80,13 +82,13 @@
       (- (fourth a) (second b))
       (- (first a) (first b)))))
 
-(define (_denomenator a b) ; (b4 - b2)(a3 - a1) - (b3 - b1)(a4 - b2)
+(define (_denomenator a b) ; (b4 - b2)(a3 - a1) - (b3 - b1)(a4 - a2)
   (-
     (*
       (- (fourth b) (second b))
       (- (third a) (first a)))
     (*
-      (- (third a) (first b))
+      (- (third b) (first b))
       (- (fourth a) (second a)))))
 
 
