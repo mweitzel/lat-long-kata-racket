@@ -49,3 +49,5 @@
 (assert "a and b intersect" (lines_intersect? list_a list_b))
 (refute "a and c don't intersect" (lines_intersect? list_a list_c))
 (refute "c and d don't intersect" (lines_intersect? list_c list_d))
+(assert "more intersections 1" (lines_intersect? '(0 0 1 1)   '(0 1 1 0)))  ; little x
+(assert "more intersections 2" (lines_intersect? '(10 0 0 10) '(0 0 10 10)));    big X
