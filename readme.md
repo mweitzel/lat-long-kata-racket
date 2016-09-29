@@ -1,6 +1,6 @@
 # neighborhoods lat/long kata - in racket
 
-# installing racket
+### installing racket
 
 First, follow instructions at http://racket-lang.org/
 
@@ -16,7 +16,7 @@ If `~/usr/bin` is already in your path, you can add racket by running:
 ln -s /Applications/Racket\ v6.6/bin/racket ~/bin/racket
 ```
 
-# running code
+### running code
 
 With the project root as your working directory, call the library with
 
@@ -30,7 +30,7 @@ Run the tests with
 ./bin/test
 ```
 
-# description
+### description
 
 You are working on a project for the City of Grand Rapids. They have provided you with latitude and longitude coordinate information defining the shapes of the city's neighborhoods. They want an application that, given the latitude and longitude of an address, tells them what neighborhood the address is part of.
 
