@@ -3,9 +3,6 @@
 (require "assert.rkt")
 (require "../lib/load-neighborhoods.rkt")
 
-;(load_neighborhoods "two-neighborhoods.txt")
-
-
 (assert "parse_lat_long pulls a number list out of a string" (equal?
   (parse_lat_long "       -85.6456921357062,42.8856213869937   ")
   (list -85.6456921357062 42.8856213869937)))
