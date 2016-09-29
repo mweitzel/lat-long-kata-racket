@@ -4,6 +4,12 @@
   (write point) (newline)
   )
 
+(define (intersects_n_times line lines_to_check)
+  (length
+    (filter
+      (lambda (check_line) (lines_intersect? check_line line))
+      lines_to_check)))
+
 (define (lines_from_boudaries boundaries)
   ((lambda (wrapped_boundaries)
     (build-list
@@ -99,3 +105,4 @@
 (provide _denomenator)
 (provide between_0_1)
 (provide lines_from_boudaries)
+(provide intersects_n_times)
