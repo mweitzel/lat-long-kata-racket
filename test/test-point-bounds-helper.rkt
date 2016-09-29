@@ -41,8 +41,8 @@
 (assert "ub_numerator c d" (equal? -4 (ub_numerator list_c list_d)))
 (assert "_denomenator c d" (equal? 0 (_denomenator list_c list_d)))
 
-(refute "between_0_1 0" (between_0_1 0))
-(refute "between_0_1 1" (between_0_1 1))
+(assert "between_0_1 0" (between_0_1 0))
+(assert "between_0_1 1" (between_0_1 1))
 (refute "between_0_1 -1" (between_0_1 -1))
 (refute "between_0_1 2" (between_0_1 2))
 
