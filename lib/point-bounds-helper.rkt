@@ -11,7 +11,7 @@
       (intersects_n_times (append point faraway) (lines_from_boudaries boundaries))
       2 )))
 
-(define faraway (list 1000 10000))
+(define faraway (list 100000 10000000))
 
 (define (lines_from_boudaries boundaries)
   ((lambda (wrapped_boundaries)
