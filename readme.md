@@ -44,3 +44,37 @@ Your application should:
 * Keep performance and correct results in mind
 
 Keep in mind the goal of this challenge: impress us with your ability to problem solve, learn to apply new tools to a tricky situation, and deliver something of value to the customer. Complete software is less important to us than understanding what you've learned, challenges you faced, and seeing your approach to the situation.
+
+### test data
+
+#### note this data is also availble in `test/points.txt` and `test/results.txt`
+
+Test data points:
+
+Point 1: -85.646282,42.912051
+Point 2: -85.646726,42.913097
+Point 3: -85.658789,42.951338
+Point 4: -85.686883,42.936334
+Point 5: -85.684714,42.955808
+Point 6: -85.664841,42.965190
+Point 7: -85.659444,42.970373
+Point 8: -85.661254,42.967824
+Point 9: -85.629390,42.957158
+Point 10: -85.657041,43.000296
+Point 11: -85.655408,42.999395
+Point 12: -85.655452,42.998219
+
+Expected results:
+
+Point 1: ken-O-Sha Park
+Point 2: Alger Heights
+Point 3: Southeast Community
+Point 4: <none>
+Point 5: John Ball Park
+Point 6: Oldtown-Heartside
+Point 7: Bellknap Lookout
+Point 8: Heritage Hill
+Point 9: <none>
+Point 10: Creston
+Point 11: North End
+Point 12: Creston
