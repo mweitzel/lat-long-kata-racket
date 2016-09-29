@@ -5,7 +5,7 @@ which racket || {
   exit 127
 }
 
-racket "test/test-point-bounds-helper.rkt"
+racket "test/all.rkt"
 
 exitCode=$?
 
