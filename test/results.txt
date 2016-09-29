@@ -1,0 +1,12 @@
+Point 1: ken-O-Sha Park
+Point 2: Alger Heights
+Point 3: Southeast Community
+Point 4: <none>
+Point 5: John Ball Park
+Point 6: Oldtown-Heartside
+Point 7: Bellknap Lookout
+Point 8: Heritage Hill
+Point 9: <none>
+Point 10: Creston
+Point 11: North End
+Point 12: Creston
