@@ -11,5 +11,3 @@
 (assert "can read frm file"
   (equal? (list -85.646282 42.912051)
   (second (first (read_points "test/points.txt")))))
-
-
