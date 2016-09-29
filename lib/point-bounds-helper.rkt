@@ -9,7 +9,7 @@
       (intersects_n_times (append point faraway) (lines_from_boudaries boundaries))
       2 )))
 
-(define faraway (list 100000000000000 100000000000000))
+(define faraway (list 10000000000000 100000000000000))
 
 (define (intersects_n_times line lines_to_check)
   (length
