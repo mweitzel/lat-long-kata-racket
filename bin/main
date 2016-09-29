@@ -1,8 +1,8 @@
 #!/bin/bash
 
-which racket || {
+which -s racket || {
   echo 'ensure `racket` is in your path'
   exit 127
 }
 
-racket "main"
+exec racket "main.rkt" "$@"
